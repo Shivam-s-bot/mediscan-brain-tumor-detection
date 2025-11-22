@@ -9,7 +9,7 @@ model = load_model('tumor_model.h5')
 class_names = ['glioma', 'meningioma', 'notumor', 'pituitary']
 
 # Web page layout
-st.title("🧠 Brain Tumor Detection")
+st.title("🧠 Mediscan Brain Tumor Detection")
 st.write("Upload an MRI image to predict tumor type.")
 
 # Upload image
@@ -31,4 +31,17 @@ if uploaded_file is not None:
     # Show result
     st.subheader(f"Predicted Tumor Type: {class_names[predicted_class]}")
     st.write("Confidence Scores:")
-    st.bar_chart({class_names[i]: confidence[i] for i in range(4)})
+    st.bar_chart({class_names[i]: confidence[i] for i in range(4)}) 
+    st.set_page_config(page_title="Brain Tumor Predictor", page_icon="🧠", layout="centered")
+
+
+
+
+    st.markdown("---")
+    st.markdown("Made with ❤️ by Shivam and Pawan| Powered by TensorFlow & Streamlit")
+
+
+
+  
+
+
